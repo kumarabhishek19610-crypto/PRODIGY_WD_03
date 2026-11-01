@@ -1,0 +1,112 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e8f5e9;
+    color: #222;
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.game-status {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+
+.tic-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+
+    gap: 5px;
+    background-color: #1e3a8a;
+    border: 8px solid #1e3a8a;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+
+    width: 100px;
+    height: 100px;
+
+    background-color: #ffffff;
+    border-radius: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cell:hover {
+    background-color: #e0f2fe;
+    transform: scale(1.02);
+}
+
+.cell.x {
+    color: #ef4444;
+}
+
+.cell.o {
+    color: #3b82f6;
+}
+
+
+.play-again {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    background-color: #10b981;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.play-again:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .tic-board {
+        width: 270px;
+    }
+
+    .box {
+        width: 86px;
+        height: 86px;
+        font-size: 45px;
+    }
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.box.winner {
+    background-color: #ffe082;
+    transform: scale(1.05);
+}
